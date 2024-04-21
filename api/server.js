@@ -9,6 +9,8 @@ import Message from './schemas/MessageSchema.js';
 import User from './schemas/UserSchema.js';  
 import Conversation from './schemas/ConversationSchema.js';  
 
+
+
 try {
     mongoose.connect('mongodb://localhost:27017/ticket_system');
     console.log('Connected to MongoDB');
@@ -34,3 +36,5 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
+
+

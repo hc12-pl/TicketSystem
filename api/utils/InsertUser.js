@@ -11,12 +11,13 @@ try {
 }
 
 const user = new User({
-    userId: "3",
+    userId: "1",
     userIcon: "url",
     role: "user",
-    email: "email3@example.com",
+    email: "email1@example.com",
     password: "HASH PASSWORD",
-    username: "username3"
+    username: "username1",
+    jwtToken: "none"
 })
 
 await user.save();

@@ -29,7 +29,12 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: true,
         unique: true
-    }
+    },
+    jwtToken: {
+        type: String,
+        required: true,
+    },
+    
 })
 
 const User = model('User', UserSchema, 'User_Collection');
