@@ -15,8 +15,9 @@ import defaultRoute from './routes/test/default.js'
     await mongoose.connect('mongodb://localhost:27017/ticket_system');
     console.log('Connected to MongoDB');
 
-    app.use('/auth', authRoute); // Use imported route handler
+    app.use('/login', authRoute); // Use imported route handler
     app.use('/protectedRoute', protectedRoute); // Use imported route handler
+    app.use('/', defaultRoute); 
 
     app.listen(config.PORT, () => {
       console.log(`Server running on port ${config.PORT}`);

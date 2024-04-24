@@ -1,8 +1,10 @@
-import jwt from 'jsonwebtoken';
+
+import paseto from 'paseto';
 import { config } from '../../config.js';
 
-let JWTTOKEN;
-JWTTOKEN = config.JWTTOKEN;
+const { V4: { verify } } = paseto;
+
+
 
 function verifyToken(req, res, next) {
     const token = req.header('authorization');
@@ -13,7 +15,7 @@ function verifyToken(req, res, next) {
         })
     }
     try {
-        const decoded = jwt.verify(token, JWTTOKEN);
+        const decoded = verify(token, config.secretKey);
         req.userId = decoded.userId;
         next();
     } catch (err) {

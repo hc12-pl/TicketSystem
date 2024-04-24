@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 import User from "../schemas/UserSchema.js";
+import bcrypt from 'bcrypt';
 const { Schema, model } = mongoose;
 
 try {
@@ -10,15 +11,23 @@ try {
     exit(1);
 }
 
+let hashedPassword = "password"
+hashedPassword = await bcrypt.hash(hashedPassword, 10);
+
 const user = new User({
     userId: "1",
     userIcon: "url",
     role: "user",
     email: "email1@example.com",
-    password: "HASH PASSWORD",
+    password: hashedPassword,
     username: "username1",
     jwtToken: "none"
 })
 
-await user.save();
+try {
+    await user.save();
+} catch (error) {
+    console.error(error)
+}
 
+process.exit(1)
