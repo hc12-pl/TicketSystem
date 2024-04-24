@@ -11,17 +11,16 @@ try {
     exit(1);
 }
 
-let hashedPassword = "password"
+let hashedPassword = "root"
 hashedPassword = await bcrypt.hash(hashedPassword, 10);
 
 const user = new User({
     userId: "1",
     userIcon: "url",
-    role: "user",
-    email: "email1@example.com",
+    role: "superadmin",
+    email: "root@example.com",
     password: hashedPassword,
-    username: "username1",
-    jwtToken: "none"
+    username: "root",
 })
 
 try {

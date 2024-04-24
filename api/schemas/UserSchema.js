@@ -30,10 +30,6 @@ const UserSchema = new mongoose.Schema({
         required: true,
         unique: true
     },
-    jwtToken: {
-        type: String,
-        required: true,
-    },
     
 })
 

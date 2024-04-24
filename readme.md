@@ -5,9 +5,9 @@
 #   > User_Collection
 #   > default
 #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 # Then you should be ready to go, to start the app just type into cmd "npm install" to install required packages and
-# then type "npm run dev"
+# then type "npm run api"
 #
 #
 # MongoDB should be connected and RESTAPI should be available at http://localhost:3000
