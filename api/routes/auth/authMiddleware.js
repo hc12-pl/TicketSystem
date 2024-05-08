@@ -2,7 +2,7 @@ import paseto from 'paseto';
 import { config } from '../../config.js';
 
 const { V4: { verify } } = paseto;
-const secretKey = config.secretKey;
+const publicKey = config.publicKey;
 
 function verifyToken(req, res, next) {
     const token = req.header('authorization');
@@ -13,7 +13,8 @@ function verifyToken(req, res, next) {
         });
     }
     try {
-        const decoded = verify(token, secretKey);
+        const decoded = verify(token.split(' ')[1], publicKey);
+
         req.userId = decoded.userId;
         next();
     } catch (err) {

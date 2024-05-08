@@ -15,7 +15,7 @@ let hashedPassword = "root"
 hashedPassword = await bcrypt.hash(hashedPassword, 10);
 
 const user = new User({
-    userId: "1",
+    userId: "2",
     userIcon: "url",
     role: "superadmin",
     email: "root@example.com",
