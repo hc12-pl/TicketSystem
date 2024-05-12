@@ -13,7 +13,7 @@ let newMessage = new Message({
     userId: "1",
     messageContent: "test message 9",
     messageTimestamp: Date.now(),
-    conversationId: "3"
+    conversationId: "2"
 })
 
 

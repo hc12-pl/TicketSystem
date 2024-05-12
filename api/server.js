@@ -11,6 +11,8 @@ import protectedRoute from './routes/auth/protectedRoute.js';
 import defaultRoute from './routes/test/default.js'
 import GetUserMessages from './routes/messages/GetUserMessages.js';
 import ConversationCompiler from './routes/messages/GetUserConversations.js';
+import NewConversation from './routes/messages/NewConversation.js';
+
 
 (async () => {
   try {
@@ -22,6 +24,7 @@ import ConversationCompiler from './routes/messages/GetUserConversations.js';
     app.use('/', defaultRoute); 
     app.use('/messages', GetUserMessages)
     app.use('/conversations', ConversationCompiler)
+    app.use('/newCoversation', NewConversation)
 
     app.listen(config.PORT, () => {
       console.log(`Server running on port ${config.PORT}`);

@@ -6,6 +6,13 @@ import verifyToken from "../auth/authMiddleware.js";
 const ConversationCompiler = express.Router();
 
 ConversationCompiler.post('/', verifyToken, (req, res) => {
+    if (!req.body.userId) {
+        res.status(400).json({
+            status: 'Failed to provide information',
+            error: "no userId provided"
+        })
+        return
+    }
     Message.find({
         userId: req.body.userId
     }).then((messages) => {

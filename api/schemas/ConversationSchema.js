@@ -14,6 +14,7 @@ const ConversationSchema = new mongoose.Schema({
     },
     conversationClosedTimestamp: {
         type: Date,
+        default: null
     },
     conversationStatus: {
         type: String,

@@ -15,12 +15,12 @@ let hashedPassword = "root"
 hashedPassword = await bcrypt.hash(hashedPassword, 10);
 
 const user = new User({
-    userId: "2",
+    userId: "1",
     userIcon: "url",
-    role: "superadmin",
-    email: "root@example.com",
+    role: "user",
+    email: "user@example.com",
     password: hashedPassword,
-    username: "root",
+    username: "user",
 })
 
 try {
