@@ -26,7 +26,7 @@ AuthRoute.post('/', async (req, res) => {
         const token = await sign(
             {sub : user.userId},
             config.secretKey,
-            {expiresIn: "1h"}
+            {expiresIn: "12h"}
 
         )
         return res.status(200).json({
