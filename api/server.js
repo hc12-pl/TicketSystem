@@ -12,6 +12,7 @@ import defaultRoute from './routes/test/default.js'
 import GetUserMessages from './routes/messages/GetUserMessages.js';
 import ConversationCompiler from './routes/messages/GetUserConversations.js';
 import NewConversation from './routes/messages/NewConversation.js';
+import NewMessage from './routes/messages/NewMessage.js';
 
 
 (async () => {
@@ -25,6 +26,7 @@ import NewConversation from './routes/messages/NewConversation.js';
     app.use('/messages', GetUserMessages)
     app.use('/conversations', ConversationCompiler)
     app.use('/newCoversation', NewConversation)
+    app.use('/newMessage', NewMessage)
 
     app.listen(config.PORT, () => {
       console.log(`Server running on port ${config.PORT}`);
