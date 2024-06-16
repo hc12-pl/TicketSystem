@@ -1,0 +1,57 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 5px 2px 75px 5px #989898;
+    border-radius: 10px;
+}
+.button {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    width: 150px;
+    text-align: center;
+    box-shadow: 5px 5px 5px 5px #989898;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 0 10px 0 50px;
+    position: relative;
+}
+
+.button:hover {
+    transform: translate(5px, 5px);
+    box-shadow: none;
+}
+
+#name {
+    margin-left: 50px;
+}
+
+#faq {
+    width: 200px;
+    background-color: rgb(95, 167, 230);
+}
+
+#contact {
+    width: 200px;
+    margin-right: 10rem;
+    background-color: rgb(238, 190, 126);
+}
+
+#create-new-ticket {
+    flex-grow: 1;
+    background-color: #d0e97c;
+}
+
+#login {
+    flex-grow: 1;
+    background-color: #c6aff8;
+}
+
+@media only screen and (max-width: 600px) {
+    .button {
+        margin: 0;
+    }
+}
