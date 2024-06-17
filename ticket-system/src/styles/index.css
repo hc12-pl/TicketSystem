@@ -6,3 +6,31 @@ body {
   color: #2a2929;
   font-family: 'Roboto', sans-serif;
 }
+
+.loading {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  /* background-color: red; */
+  top: 50%;
+  left: 50%;
+  animation-duration: 1s;
+  animation-name: loading;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  transition: all 1s;
+  animation-direction: alternate-reverse;
+  border-radius: 5px;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(45deg);
+    background-color: rgb(147, 87, 231);
+    transform: scale(-2);
+  }
+  100% {
+    transform: rotate(360deg);
+    background-color: rgb(99, 189, 228);
+  }
+}
