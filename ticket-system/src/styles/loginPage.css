@@ -1,5 +1,71 @@
 main {
     height: 500px;
-    width: 300px;
-    background-color: red;
+    width: 500px;
+    background: rgb(220,26,226);
+    background: linear-gradient(
+        90deg, 
+        rgba(220,26,226,0.8) 2%,   /* Reduced opacity */
+        rgba(19,110,195,0.8) 46%,  /* Reduced opacity */
+        rgba(74,21,179,0.8) 97%    /* Reduced opacity */
+    );
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 10%;
+    top: 70%;
+    border-radius: 3rem;
+}
+
+#username, #password {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    border-radius: 1rem;
+    border: none; /* Remove border */
+    color: white; /* White text color */
+}
+
+#username input, #password input {
+    background: transparent; /* Make input background transparent */
+    border: none; /* Remove input border */
+    color: white; /* White text color */
+    padding-left: 0.5rem;
+    outline: none; /* Remove input outline */
+}
+
+#username input::placeholder, #password input::placeholder {
+    color: white; /* White placeholder color */
+}
+
+.material-symbols-outlined {
+    color: white; /* White icon color */
+}
+
+#forgotPswd {
+    transition: all 1s;
+    color: rgb(189, 181, 255);
+}
+#forgotPswd:hover {
+    color: white;
+}
+
+#submitBtn {
+    display: block;
+    margin: 1rem auto;
+    padding: 0.5rem 3rem;
+    background-color: rgb(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#submitBtn:hover {
+    background-color: rgb(255, 255, 255, 0.3);
 }
