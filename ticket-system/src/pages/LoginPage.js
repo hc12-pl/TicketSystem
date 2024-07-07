@@ -21,7 +21,7 @@ function LoginPage() {
     <>
       <main>
         <h1>Welcome back!</h1>
-        <form>
+        <form action="user/info" method="post">
           <section id="username">
             <span className="material-symbols-outlined">person</span>
             <input id="usernameInput" type="text" placeholder="Username" />
