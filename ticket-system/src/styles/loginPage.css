@@ -15,7 +15,6 @@ main {
     flex-direction: column;
     margin: 0 auto;
     margin-top: 10%;
-    top: 70%;
     border-radius: 3rem;
 }
 
@@ -23,11 +22,27 @@ main {
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
+    width: 15rem;
     padding: 0.5rem;
     background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
     border-radius: 1rem;
     border: none; /* Remove border */
     color: white; /* White text color */
+}
+
+#username .material-symbols-outlined, #password .material-symbols-outlined {
+    margin-right: 0.5rem;
+}
+
+#password .material-symbols-outlined:last-child {
+    margin-left: auto;
+    cursor: pointer;
+    transition: all 1s;
+    color: rgb(226, 223, 255);
+
+}
+#password .material-symbols-outlined:last-child:hover {
+    color: #fff;
 }
 
 #username input, #password input {
@@ -36,20 +51,18 @@ main {
     color: white; /* White text color */
     padding-left: 0.5rem;
     outline: none; /* Remove input outline */
+    flex-grow: 1; /* Take up remaining space */
 }
 
 #username input::placeholder, #password input::placeholder {
     color: white; /* White placeholder color */
 }
 
-.material-symbols-outlined {
-    color: white; /* White icon color */
-}
-
 #forgotPswd {
     transition: all 1s;
     color: rgb(189, 181, 255);
 }
+
 #forgotPswd:hover {
     color: white;
 }
@@ -58,7 +71,7 @@ main {
     display: block;
     margin: 1rem auto;
     padding: 0.5rem 3rem;
-    background-color: rgb(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.2);
     color: white;
     border: none;
     border-radius: 5px;
@@ -67,5 +80,5 @@ main {
 }
 
 #submitBtn:hover {
-    background-color: rgb(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.3);
 }
